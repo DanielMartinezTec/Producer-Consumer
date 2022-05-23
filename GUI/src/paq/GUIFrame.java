@@ -293,10 +293,16 @@ public class GUIFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        
-        
-        
-        if((Integer)jSpinner1.getValue() > 0 && (Integer)jSpinner1.getValue() <=10 &&
+        while(tableModel2.getRowCount() > 0)
+        {
+                tableModel2.removeRow(0);
+
+        }
+        cont=0;
+        if(jTextField1.getText().equals("")== false&&jTextField2.getText().equals("")== false&&jTextField3.getText().equals("")== false&&jTextField4.getText().equals("")== false){
+            
+            
+             if((Integer)jSpinner1.getValue() > 0 && (Integer)jSpinner1.getValue() <=10 &&
             (Integer) jSpinner2.getValue()>0 && (Integer)jSpinner2.getValue() <=10 &&
                 
                 Integer.parseInt(jTextField3.getText()) >0 && Integer.parseInt(jTextField3.getText())<=100 &&
@@ -304,8 +310,8 @@ public class GUIFrame extends javax.swing.JFrame {
                 Integer.parseInt(jTextField1.getText()) >=0 && Integer.parseInt(jTextField1.getText())<=10000 &&
                 Integer.parseInt(jTextField2.getText()) >=0 && Integer.parseInt(jTextField2.getText())<=10000&&
                 
-                Integer.parseInt(jTextField4.getText()) >=0 && Integer.parseInt(jTextField3.getText())<10 &&
-                (Integer) jSpinner2.getValue()>=0 && (Integer)jSpinner2.getValue() <10){
+                Integer.parseInt(jTextField4.getText()) >=0 && Integer.parseInt(jTextField4.getText())<10 &&
+                (Integer) jSpinner3.getValue()>=0 && (Integer)jSpinner3.getValue() <10){
             
             Buffer buffer = new Buffer(Integer.parseInt(jTextField3.getText()),this);
             int value = (Integer) jSpinner1.getValue();
@@ -316,6 +322,8 @@ public class GUIFrame extends javax.swing.JFrame {
         
             int rangoUno = Integer.parseInt(jTextField4.getText());
             int rangoDos = (Integer)jSpinner3.getValue();
+            
+            
             
             
             for (int i = 0; i < value; i++) {
@@ -341,6 +349,7 @@ public class GUIFrame extends javax.swing.JFrame {
             tableModel2.addColumn("Tarea");
             tableModel2.addColumn("Resultado");
             jTable2.setModel(tableModel2);
+            
             
             
         }
@@ -397,12 +406,23 @@ public class GUIFrame extends javax.swing.JFrame {
                 "Error rango de valores max ",
                 JOptionPane.ERROR_MESSAGE);
         }
+        }else{
+            JOptionPane.showMessageDialog(null,
+                "hay campos vacios",
+                "Error campos vacios ",
+                JOptionPane.ERROR_MESSAGE);
+        }
         
+        int m=0;
+            jSpinner1.setValue(m);
+            jSpinner2.setValue(m);
+            jSpinner3.setValue(m);
+            jTextField1.setText("");
+            jTextField2.setText("");
+            jTextField3.setText("");
+            jTextField4.setText("");
         
-         
-        
-        
-        
+  
         
         
         
