@@ -42,7 +42,7 @@ public class Consumer extends Thread {
             return val+"";
         }
         if(Character.toString(prod.charAt(27)).equals("/") ){
-            double val = Character.getNumericValue(prod.charAt(29)) / Character.getNumericValue(prod.charAt(31))+0.0;
+            float val = Float.parseFloat(String.valueOf(prod.charAt(29))) / Float.parseFloat(String.valueOf(prod.charAt(31)));
             return val+"";
         }
         
