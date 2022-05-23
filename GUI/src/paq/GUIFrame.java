@@ -383,20 +383,21 @@ public class GUIFrame extends javax.swing.JFrame {
                 "Error espera consumidor",
                 JOptionPane.ERROR_MESSAGE);
         }
-        if(Integer.parseInt(jTextField4.getText()) <0 || Integer.parseInt(jTextField3.getText())>9  
+        if(Integer.parseInt(jTextField4.getText()) <0 || Integer.parseInt(jTextField4.getText())>9  
             ){
             JOptionPane.showMessageDialog(null,
                 "rango de valores del 0 al 9",
                 "Error rango de valores min ",
                 JOptionPane.ERROR_MESSAGE);
         }
-        if((Integer) jSpinner2.getValue()<0 || (Integer)jSpinner2.getValue() >9  
+        if((Integer) jSpinner3.getValue()<0 || (Integer)jSpinner3.getValue() >9  
             ){
             JOptionPane.showMessageDialog(null,
                 "rango de valores del 0 al 9",
                 "Error rango de valores max ",
                 JOptionPane.ERROR_MESSAGE);
         }
+        
         
          
         
